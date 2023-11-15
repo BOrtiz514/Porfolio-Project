@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return(
         <StyledHeader>
-    <p className='ProjectName'>Brian Ortiz-Muscia</p>
-    <Link to="/" className='ProjectTitle'>My Portfolio Homepage</Link>
+    <p className='MyName'>Brian Ortiz-Muscia</p>
+    <Link to="/" className='Homepage'>Homepage!</Link>
     <NavBarButtons>
     <Link to="/about" className='navBarButtons'>About Me</Link>
     <Link to="/projects" className='navBarButtons'>Projects</Link>
@@ -19,17 +19,36 @@ const StyledHeader = styled.div`
 margin: 0;
 border:1px solid black;
 background-color: aliceblue;
-font-family: 'Poppins', sans-serif;
 
-.ProjectName{
+
+.MyName{
 margin-left:16px;
 margin-bottom: 5px;
+font-weight: bold;
+font-size: 1.2em;
 }
 
-.ProjectTitle{
+.Homepage{
 margin-left:16px;
-margin-top:5px;
 font-style: italic;
+border: 1px solid black;
+background-color: dodgerblue;
+color: white;
+border: 1px solid black;
+border-radius: 5px;
+font-size: 0.8em;
+border-color: black;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+padding: 5px;
+text-decoration: none;
+&:hover{
+        transform: scale(1.5);
+        background-color: deepskyblue;
+        color: floralwhite;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 }
 `
 const NavBarButtons = styled.div`
@@ -41,8 +60,6 @@ margin-bottom: 16px;
 .navBarButtons{
     margin-right: 10px;
     margin-left: 10px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
     background-color: dodgerblue;
     color: white;
     border: 1px solid black;
@@ -50,6 +67,8 @@ margin-bottom: 16px;
     font-size: 0.8em;
     border-color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
     padding: 5px;
     text-decoration: none;
 
